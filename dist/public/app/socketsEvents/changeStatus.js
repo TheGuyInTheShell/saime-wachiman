@@ -4,7 +4,7 @@ const changeStatus = (statusCheck)=> {
     if (statusCheck.status === 'online') {
         statusArea.classList.remove('text-red')
         statusArea.classList.add('text-green')
-    }else{
+    } if(statusCheck.status === 'offline'){
         statusArea.classList.remove('text-green')
         statusArea.classList.add('text-red')
     }

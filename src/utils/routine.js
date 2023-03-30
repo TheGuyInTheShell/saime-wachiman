@@ -22,7 +22,10 @@ export default class Routine {
 			}
 			console.log("saime status: ", fetchSaime.status);
 		} catch (error) {
-			console.log("saime me ha pillado");
+			console.log("saime offline:(");
+			this.#changeStatus({
+				status: "offline",
+			});
 		}
 	}
 	#changeStatus(statusCheck) {

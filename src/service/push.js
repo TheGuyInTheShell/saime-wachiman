@@ -25,11 +25,13 @@ export const pushNotification = async () => {
 					.sendNotification(
 						vapid,
 						JSON.stringify({
-							title: "SAIME-WACHIMAN:",
+							title: "SAIME-WACHIMAN!",
 							content: "la pagina de registro esta en linea, aprovecha!",
 						}),
 					)
-					.then(()=> {})
+					.then(()=> {
+						console.log('send push notifications')
+					})
 					.catch(() => deleteVapid(id));
 			});
 		}
