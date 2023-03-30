@@ -4,6 +4,8 @@ import router from "./routes/routes";
 import { Server as socketServer } from "socket.io";
 import http from "http";
 import Routine from "./utils/routine";
+import { port } from "./env"
+
 
 const app = express();
 const server = http.createServer(app);
@@ -21,6 +23,6 @@ io.on("connection", (socket) => {
 	socket.emit("sv:currentstatus", { status: routine.previusStatus });
 });
 
-server.listen(3000, () => {
-	console.log("La aplicación está escuchando en http://localhost:3000");
+server.listen(port, () => {
+	console.log(`La aplicación está escuchando sobre ${port}`);
 });
