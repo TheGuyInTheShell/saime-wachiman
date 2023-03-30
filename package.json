@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "swc src -d dist --watch && nodemon dist/index"
+    "start": "swc src -d dist && node dist/index.js"
   },
   "keywords": [],
   "author": "",
