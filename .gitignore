@@ -1,0 +1,9 @@
+node_modules
+firebase.json
+dist/routes
+dist/service
+dist/utils
+dist/env.js
+dist/index.js
+src/utils/vapid.json
+package-lock.json

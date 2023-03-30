@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Saime-Wachiman</title>
+</head>
+<body class="app">
+    <main class="container d-flex principal">
+        <section class="d-flex flex-col">
+            <h1 class="title">Saime Wachiman</h1>
+            <p>Aplicacion web progresiva que te avisa si la pagina del Saime esta en linea.</p>
+            <p class="link-p">
+                Link a registro saime: 
+                <a class="link" href="https://siic.saime.gob.ve">https://siic.saime.gob.ve</a>
+            </p>
+            <section class="d-flex container-status">
+                <div class="container-btn">
+                    <button class="btn btn-sub" id="btnSub">
+                        subcribirse
+                    </button>
+                    <button class="d-none btn btn-unsub" id="btnUnsub">
+                        desuscribirse
+                    </button>
+                </div>
+                <article class="d-flex">
+                    <p>Status: <pre id="status" class="d-flex status text-red">offline</pre></p>
+                </article>
+            </section>
+
+        </section>
+    </main>
+    <footer class="more">
+        <section>
+            redes
+        </section>
+        <section>
+            logo
+        </section>
+        <section>
+            about
+        </section>
+    </footer>
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="./service/initWorker.js"></script>
+    <script src="./app/index.js" type="module"></script>
+</body>
+</html>
